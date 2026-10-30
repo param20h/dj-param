@@ -1,0 +1,49 @@
+/* GDG design tokens — verbatim from GDGDesign.md §2.1 / §3.1 */
+:root {
+  color-scheme: dark;
+
+  --bg-primary: #1e1e1e;
+  --bg-surface: #252525;
+  --bg-elevated: #2d2d2d;
+  --text-primary: #f0f0f0;
+  --text-muted: #b5b5b5;
+  --border-subtle: rgba(240, 240, 240, 0.12);
+
+  --blue-500: #4285f4;
+  --green-500: #34a853;
+  --yellow-600: #f9ab00;
+  --red-500: #ea4335;
+
+  --halftone-blue: #57caff;
+  --halftone-green: #5cdb6d;
+  --halftone-yellow: #ffd427;
+  --halftone-red: #ff7daf;
+
+  --pastel-blue: #c3ecf6;
+  --pastel-green: #ccf6c5;
+  --pastel-yellow: #ffe7a5;
+  --pastel-red: #f8d8d8;
+
+  accent-color: var(--blue-500);
+
+  --font-display: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Google Sans Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Google Sans Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Deterministic accent rotation: data-accent drives the three-tier harmony */
+[data-accent='blue'] { --accent-core: var(--blue-500); --accent-halftone: var(--halftone-blue); --accent-pastel: var(--pastel-blue); }
+[data-accent='red'] { --accent-core: var(--red-500); --accent-halftone: var(--halftone-red); --accent-pastel: var(--pastel-red); }
+[data-accent='yellow'] { --accent-core: var(--yellow-600); --accent-halftone: var(--halftone-yellow); --accent-pastel: var(--pastel-yellow); }
+[data-accent='green'] { --accent-core: var(--green-500); --accent-halftone: var(--halftone-green); --accent-pastel: var(--pastel-green); }
+
+@font-face { font-family: 'Google Sans'; src: url('/fonts/GoogleSans-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Google Sans'; src: url('/fonts/GoogleSans-Medium.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Google Sans'; src: url('/fonts/GoogleSans-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Google Sans Text'; src: url('/fonts/GoogleSansText-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Google Sans Text'; src: url('/fonts/GoogleSansText-Medium.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Google Sans Text'; src: url('/fonts/GoogleSansText-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Google Sans Mono'; src: url('/fonts/GoogleSansMono-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Google Sans Mono'; src: url('/fonts/GoogleSansMono-Medium.ttf') format('truetype'); font-weight: 500; font-display: swap; }
+@font-face { font-family: 'Google Sans Mono'; src: url('/fonts/GoogleSansMono-SemiBold.ttf') format('truetype'); font-weight: 600; font-display: swap; }
+@font-face { font-family: 'Google Sans Mono'; src: url('/fonts/GoogleSansMono-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }

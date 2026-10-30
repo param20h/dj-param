@@ -1,0 +1,177 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+@theme {
+  --color-canvas: #1e1e1e;
+  --color-surface: #252525;
+  --color-elevated: #2d2d2d;
+  --color-ink: #f0f0f0;
+  --color-muted: #b5b5b5;
+  --color-hairline: rgba(240, 240, 240, 0.12);
+  --color-blue: #4285f4;
+  --color-green: #34a853;
+  --color-yellow: #f9ab00;
+  --color-red: #ea4335;
+  --color-halftone-blue: #57caff;
+  --color-halftone-yellow: #ffd427;
+  --font-display: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Google Sans Text', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Google Sans Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+html, body {
+  overflow-x: clip;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+h1, h2, h3 { text-wrap: balance; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  background: var(--accent-pastel);
+  color: #1e1e1e;
+}
+}
+
+@layer components {
+/* Primary CTA — GDGDesign §2.2 */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--blue-500);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, translate 160ms ease;
+}
+.btn-primary:hover:not(:disabled) { background: var(--halftone-blue); color: #1e1e1e; translate: 0 -2px; }
+.btn-primary:disabled { cursor: progress; opacity: 0.6; }
+
+/* Secondary CTA — GDGDesign §2.2 */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  min-width: 2.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 160ms ease, color 160ms ease, translate 160ms ease;
+}
+.btn-secondary:hover:not(:disabled) { border-color: var(--halftone-yellow); color: var(--halftone-yellow); translate: 0 -2px; }
+.btn-secondary:disabled { opacity: 0.5; cursor: not-allowed; }
+
+:focus-visible { outline: 2px solid var(--halftone-blue); outline-offset: 2px; }
+
+input[type='range'].volume { accent-color: var(--accent-core); width: 100%; min-height: 2.5rem; cursor: pointer; }
+
+/* Track progress — driven by the --progress var App writes every frame */
+.progress-track { height: 3px; border-radius: 999px; background: var(--border-subtle); overflow: hidden; }
+.progress-fill {
+  height: 100%;
+  background: var(--accent-halftone);
+  transform-origin: left;
+  transform: scaleX(var(--progress, 0));
+  transition: background-color 500ms ease;
+}
+
+/* Thumbnail as a record: grooves via the ring border, a spindle hole in the middle */
+.vinyl { border-radius: 999px; overflow: hidden; background: #141414; box-shadow: inset 0 0 0 3px #141414; }
+.vinyl::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: repeating-radial-gradient(circle, rgba(0, 0, 0, 0) 0 3px, rgba(0, 0, 0, 0.18) 3px 4px);
+  pointer-events: none;
+}
+.vinyl-hole {
+  position: absolute;
+  inset: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 999px;
+  background: var(--bg-primary);
+  box-shadow: 0 0 0 2px var(--accent-pastel);
+  z-index: 1;
+}
+
+/* Dock border catches the accent on every kick */
+.beat-border {
+  border-color: color-mix(in srgb, var(--accent-halftone) calc(var(--beat, 0) * 70%), var(--border-subtle));
+}
+
+@keyframes spin { to { rotate: 360deg; } }
+@keyframes eq { 0%, 100% { scale: 1 0.35; } 50% { scale: 1 1; } }
+@keyframes start-ring {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-halftone) 60%, transparent); }
+  100% { box-shadow: 0 0 0 14px transparent; }
+}
+
+.eq-bars { display: inline-flex; align-items: flex-end; gap: 2px; height: 10px; }
+.eq-bars i { display: block; width: 2px; height: 100%; background: currentColor; transform-origin: bottom; scale: 1 0.5; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .vinyl { animation: spin 4s linear infinite paused; }
+  .vinyl.is-spinning { animation-play-state: running; }
+  .eq-bars i { animation: eq 0.9s ease-in-out infinite; }
+  .eq-bars i:nth-child(2) { animation-delay: -0.3s; animation-duration: 0.7s; }
+  .eq-bars i:nth-child(3) { animation-delay: -0.6s; animation-duration: 1.1s; }
+  .beat-pulse { scale: calc(1 + var(--beat, 0) * 0.07); }
+  .start-ring { animation: start-ring 1.6s ease-out infinite; }
+}
+
+}
+
+/* PRD §6: visually hidden, never display:none, so YouTube keeps playing */
+.yt-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  left: -9999px;
+  top: 0;
+}
