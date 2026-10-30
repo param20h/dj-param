@@ -15,9 +15,8 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # Served from https://<org>.github.io/gdgjalandhar-music/ for now.
-  # Once a custom domain is configured, change this to "/".
-  BASE_PATH: /gdgjalandhar-music/
+  # Served from the custom domain https://dj.gdgjalandhar.com/ (see public/CNAME).
+  BASE_PATH: /
 
 jobs:
   build:
