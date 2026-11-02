@@ -23,7 +23,6 @@ export function TopBar({ player }: { player: PlayerApi }) {
       </div>
 
       <div className="flex items-center gap-2">
-        <span className="eyebrow hidden text-muted md:inline">{'// robot dj'}</span>
         <div
           className="flex items-center rounded-full border"
           style={{ borderColor: 'var(--border-subtle)', background: 'rgba(255, 255, 255, 0.72)', backdropFilter: 'blur(12px)' }}

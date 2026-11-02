@@ -131,17 +131,6 @@ export function DjDeck() {
         </mesh>
       ))}
       <Text
-        font={`${import.meta.env.BASE_URL}fonts/GoogleSansMono-SemiBold.ttf`}
-        fontSize={0.13}
-        letterSpacing={0.08}
-        color="#b5b5b5"
-        position={[0, TOP_Y - 0.45, 0.61]}
-        anchorX="center"
-        anchorY="middle"
-      >
-        {'// ROBOT DJ'}
-      </Text>
-      <Text
         font={`${import.meta.env.BASE_URL}fonts/GoogleSansMono-Regular.ttf`}
         fontSize={0.075}
         letterSpacing={0.06}
