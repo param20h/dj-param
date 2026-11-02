@@ -1,7 +1,7 @@
 import { useLayoutEffect, useMemo, useRef } from 'react';
 import * as THREE from 'three';
 import { useFrame } from '@react-three/fiber';
-import { GOOGLE_HEX, mats } from './materials';
+import { GOOGLE_HEX } from './materials';
 import { kick, scene } from './state';
 
 const DUST_COUNT = 240;
@@ -10,6 +10,7 @@ const BURST_LIFE = 1.8;
 const GRAVITY = -5.5;
 
 const DUST_HEIGHT = 5.5;
+const DUST_COLOR = new THREE.Color('#aeb9c9');
 
 /**
  * Accent-tinted dust drifting up through the light beams. All motion runs in the vertex shader:
@@ -105,7 +106,7 @@ function Dust() {
     u.uEnergy.value = scene.energy;
     u.uMotion.value = motion;
     u.uViewHeight.value = state.size.height * state.gl.getPixelRatio();
-    (u.uColor.value as THREE.Color).copy(mats.accentGlow.color);
+    (u.uColor.value as THREE.Color).copy(DUST_COLOR);
   });
 
   return <points ref={points} geometry={geometry} material={material} frustumCulled={false} />;
