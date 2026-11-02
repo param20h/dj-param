@@ -150,7 +150,7 @@ export function DjDeck() {
         anchorX="center"
         anchorY="middle"
       >
-        GDG JALANDHAR
+        PARAM20H
       </Text>
 
       <Turntable x={-1.15} refs={leftDeck} />

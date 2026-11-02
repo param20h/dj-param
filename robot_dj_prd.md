@@ -2,7 +2,7 @@
 
 ## 1. Product Overview
 **Name:** Robot DJ (Working Title)
-**Concept:** A highly minimalist, visually engaging web-based music player inspired by `dj.gdgjalandhar.com`. The core feature is a cool, futuristic animated robot acting as a DJ. The platform streams a hardcoded playlist directly from YouTube in an "audio-only" format, utilizing a randomized shuffle playback system rather than serial order.
+**Concept:** A highly minimalist, visually engaging web-based music player by param20h. The core feature is a cool, futuristic animated robot acting as a DJ. The platform streams a hardcoded playlist directly from YouTube in an "audio-only" format, utilizing a randomized shuffle playback system rather than serial order.
 **Target Audience:** Users looking for a seamless, continuous ambient/music experience with a visually appealing but non-distracting interface.
 
 ## 2. Goals & Objectives

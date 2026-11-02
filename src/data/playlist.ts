@@ -2,7 +2,7 @@
  * Hardcoded YouTube playlist (must be public or unlisted, with embeddable videos).
  * Replace the placeholder with the real playlist ID. For quick testing, `?list=<id>` in the URL overrides it.
  */
-const DEFAULT_PLAYLIST_ID = "PLG1mAGV7SXnXK770Wo8We_6PjpmhyhS51";
+const DEFAULT_PLAYLIST_ID = "PLeM8X59cdeyg";
 
 export const PLAYLIST_ID =
   new URLSearchParams(window.location.search).get("list") ??
@@ -22,8 +22,8 @@ export const ACCENT_HEX: Record<
 };
 
 export const LOGO_FOR: Record<Accent, string> = {
-  blue: `${import.meta.env.BASE_URL}brand/GDG-Jalandhar-Logo-Blue-Light.svg`,
-  red: `${import.meta.env.BASE_URL}brand/GDG-Jalandhar-Logo-Red-Light.svg`,
-  yellow: `${import.meta.env.BASE_URL}brand/GDG-Jalandhar-Logo-Yellow-Light.svg`,
-  green: `${import.meta.env.BASE_URL}brand/GDG-Jalandhar-Logo-Green-Light.svg`,
+  blue: `${import.meta.env.BASE_URL}param20h-logo.svg`,
+  red: `${import.meta.env.BASE_URL}param20h-logo.svg`,
+  yellow: `${import.meta.env.BASE_URL}param20h-logo.svg`,
+  green: `${import.meta.env.BASE_URL}param20h-logo.svg`,
 };

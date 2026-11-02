@@ -163,7 +163,7 @@ export function usePlayer(mountRef: React.RefObject<HTMLDivElement>) {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: track.title,
       artist: track.author,
-      album: 'Robot DJ · GDG Jalandhar',
+      album: 'Robot DJ · param20h',
       artwork: [{ src: track.thumb, sizes: '320x180', type: 'image/jpeg' }],
     });
   }, [track]);

@@ -48,7 +48,7 @@ export function StartOverlay({ player }: { player: PlayerApi }) {
           className="mt-2 hidden max-w-[60ch] text-muted min-[400px]:block"
           style={{ fontSize: 'clamp(0.98rem, 1.4vw, 1.1rem)', lineHeight: 1.6, textWrap: 'pretty' }}
         >
-          A shuffled, audio-only set from GDG Jalandhar. Hit start and let the bot take the decks.
+          A shuffled, audio-only set from param20h. Hit start and let the bot take the decks.
         </motion.p>
 
         <motion.div variants={item} className="mt-4 border-t border-dashed pt-4" style={{ borderColor: 'var(--border-subtle)' }}>

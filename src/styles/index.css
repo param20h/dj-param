@@ -62,7 +62,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 @layer components {
-/* Primary CTA — GDGDesign §2.2 */
+/* Primary CTA */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -81,7 +81,7 @@ h1, h2, h3 { text-wrap: balance; }
 .btn-primary:hover:not(:disabled) { background: var(--halftone-blue); color: #1e1e1e; translate: 0 -2px; }
 .btn-primary:disabled { cursor: progress; opacity: 0.6; }
 
-/* Secondary CTA — GDGDesign §2.2 */
+/* Secondary CTA */
 .btn-secondary {
   display: inline-flex;
   align-items: center;

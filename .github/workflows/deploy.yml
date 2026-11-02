@@ -15,7 +15,7 @@ concurrency:
   cancel-in-progress: true
 
 env:
-  # Served from the custom domain https://dj.gdgjalandhar.com/ (see public/CNAME).
+  # Served from the GitHub Pages project URL.
   BASE_PATH: /
 
 jobs:
