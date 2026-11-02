@@ -30,7 +30,7 @@ export function StartOverlay({ player }: { player: PlayerApi }) {
     >
       <div
         className="w-full max-w-[32rem] rounded-[1.5rem] border p-5 sm:p-6"
-        style={{ background: 'rgba(37, 37, 37, 0.88)', borderColor: 'var(--border-subtle)', backdropFilter: 'blur(12px)' }}
+        style={{ background: 'rgba(255, 255, 255, 0.78)', borderColor: 'var(--border-subtle)', backdropFilter: 'blur(12px)' }}
       >
         <motion.p variants={item} className="eyebrow" style={{ color: 'var(--accent-halftone)' }}>
           {'// press play'}

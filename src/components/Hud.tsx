@@ -26,7 +26,7 @@ export function TopBar({ player }: { player: PlayerApi }) {
         <span className="eyebrow hidden text-muted md:inline">{'// robot dj'}</span>
         <div
           className="flex items-center rounded-full border"
-          style={{ borderColor: 'var(--border-subtle)', background: 'rgba(30, 30, 30, 0.86)', backdropFilter: 'blur(12px)' }}
+          style={{ borderColor: 'var(--border-subtle)', background: 'rgba(255, 255, 255, 0.72)', backdropFilter: 'blur(12px)' }}
           role="group"
           aria-label="Accent color"
         >
@@ -45,7 +45,7 @@ export function TopBar({ player }: { player: PlayerApi }) {
               >
                 <motion.span
                   className={`block rounded-full ${current ? 'beat-pulse' : ''}`}
-                  style={{ background: ACCENT_HEX[a].core, boxShadow: active ? '0 0 0 2px #1e1e1e, 0 0 0 3px #f0f0f0' : 'none' }}
+                  style={{ background: ACCENT_HEX[a].core, boxShadow: active ? '0 0 0 2px #f4f7fb, 0 0 0 3px #17243b' : 'none' }}
                   animate={{ width: current ? 16 : 10, height: current ? 16 : 10 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 22 }}
                 />
@@ -70,7 +70,7 @@ export function Dock({ player }: { player: PlayerApi }) {
     >
       <div
         className="beat-border w-full max-w-[40rem] rounded-[1.25rem] border p-4 sm:p-5"
-        style={{ background: 'rgba(37, 37, 37, 0.88)', backdropFilter: 'blur(12px)' }}
+        style={{ background: 'rgba(255, 255, 255, 0.78)', backdropFilter: 'blur(12px)' }}
       >
         <NowPlaying player={player} />
         {player.error && (

@@ -1,28 +1,28 @@
 /* Design tokens */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
-  --bg-primary: #1e1e1e;
-  --bg-surface: #252525;
-  --bg-elevated: #2d2d2d;
-  --text-primary: #f0f0f0;
-  --text-muted: #b5b5b5;
-  --border-subtle: rgba(240, 240, 240, 0.12);
+  --bg-primary: #f4f7fb;
+  --bg-surface: rgba(255, 255, 255, 0.78);
+  --bg-elevated: #ffffff;
+  --text-primary: #17243b;
+  --text-muted: #53627a;
+  --border-subtle: rgba(65, 87, 118, 0.16);
 
-  --blue-500: #4285f4;
-  --green-500: #34a853;
-  --yellow-600: #f9ab00;
-  --red-500: #ea4335;
+  --blue-500: #6f9fd2;
+  --green-500: #8eb6a1;
+  --yellow-600: #d8b46a;
+  --red-500: #c98282;
 
-  --halftone-blue: #57caff;
-  --halftone-green: #5cdb6d;
-  --halftone-yellow: #ffd427;
-  --halftone-red: #ff7daf;
+  --halftone-blue: #8cb8e8;
+  --halftone-green: #a8cfb8;
+  --halftone-yellow: #efd18b;
+  --halftone-red: #dfa1a1;
 
-  --pastel-blue: #c3ecf6;
-  --pastel-green: #ccf6c5;
-  --pastel-yellow: #ffe7a5;
-  --pastel-red: #f8d8d8;
+  --pastel-blue: #e2edf9;
+  --pastel-green: #e6f1e9;
+  --pastel-yellow: #fbf1d8;
+  --pastel-red: #f5e5e5;
 
   accent-color: var(--blue-500);
 

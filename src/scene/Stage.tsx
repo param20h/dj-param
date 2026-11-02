@@ -79,7 +79,7 @@ function Conductor() {
   return null;
 }
 
-const SECTION_BASE = new THREE.Color('#3c3c3c');
+const SECTION_BASE = new THREE.Color('#c7d2e1');
 const sectionTarget = new THREE.Color();
 
 /** Infinite grid whose section lines flash toward the accent on the kick. */
@@ -100,10 +100,10 @@ function Floor() {
       args={[40, 40]}
       cellSize={0.5}
       cellThickness={0.6}
-      cellColor="#2f2f2f"
+      cellColor="#dbe3ee"
       sectionSize={2}
       sectionThickness={1}
-      sectionColor="#3c3c3c"
+      sectionColor="#c7d2e1"
       fadeDistance={22}
       fadeStrength={1.5}
       infiniteGrid
@@ -117,7 +117,7 @@ function Effects({ quality }: { quality: 'high' | 'low' }) {
   return (
     <EffectComposer multisampling={0}>
       <Bloom mipmapBlur luminanceThreshold={1} luminanceSmoothing={0.2} intensity={0.9} radius={0.7} />
-      <Vignette offset={0.25} darkness={0.55} />
+      <Vignette offset={0.25} darkness={0.12} />
       <SMAA />
     </EffectComposer>
   );
@@ -154,9 +154,9 @@ export function Stage() {
           onFallback={() => setQuality('low')}
         />
         <AdaptiveDpr pixelated={false} />
-        <color attach="background" args={['#1e1e1e']} />
-        <fog attach="fog" args={['#1e1e1e', 9, 22]} />
-        <hemisphereLight args={['#ffffff', '#1e1e1e', 1.1]} />
+        <color attach="background" args={['#f4f7fb']} />
+        <fog attach="fog" args={['#f4f7fb', 9, 22]} />
+        <hemisphereLight args={['#ffffff', '#d6deea', 1.1]} />
         <directionalLight position={[3, 6, 5]} intensity={2.2} />
         <directionalLight position={[-4, 3, -3]} intensity={0.6} />
 

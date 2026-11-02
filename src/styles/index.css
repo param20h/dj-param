@@ -2,18 +2,18 @@
 @import './tokens.css';
 
 @theme {
-  --color-canvas: #1e1e1e;
-  --color-surface: #252525;
-  --color-elevated: #2d2d2d;
-  --color-ink: #f0f0f0;
-  --color-muted: #b5b5b5;
-  --color-hairline: rgba(240, 240, 240, 0.12);
-  --color-blue: #4285f4;
-  --color-green: #34a853;
-  --color-yellow: #f9ab00;
-  --color-red: #ea4335;
-  --color-halftone-blue: #57caff;
-  --color-halftone-yellow: #ffd427;
+  --color-canvas: #f4f7fb;
+  --color-surface: #ffffff;
+  --color-elevated: #ffffff;
+  --color-ink: #17243b;
+  --color-muted: #53627a;
+  --color-hairline: rgba(65, 87, 118, 0.16);
+  --color-blue: #6f9fd2;
+  --color-green: #8eb6a1;
+  --color-yellow: #d8b46a;
+  --color-red: #c98282;
+  --color-halftone-blue: #8cb8e8;
+  --color-halftone-yellow: #efd18b;
   --font-display: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-sans: 'Google Sans Text', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: 'Google Sans Mono', ui-monospace, SFMono-Regular, monospace;
@@ -57,7 +57,7 @@ h1, h2, h3 { text-wrap: balance; }
   line-height: 1;
   letter-spacing: 0.04em;
   background: var(--accent-pastel);
-  color: #1e1e1e;
+  color: var(--text-primary);
 }
 }
 
@@ -71,14 +71,14 @@ h1, h2, h3 { text-wrap: balance; }
   min-height: 2.5rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  background: var(--blue-500);
+  background: #17243b;
   color: #ffffff;
   font-family: var(--font-display);
   font-weight: 500;
   cursor: pointer;
   transition: background-color 160ms ease, color 160ms ease, translate 160ms ease;
 }
-.btn-primary:hover:not(:disabled) { background: var(--halftone-blue); color: #1e1e1e; translate: 0 -2px; }
+.btn-primary:hover:not(:disabled) { background: var(--blue-500); color: #ffffff; translate: 0 -2px; }
 .btn-primary:disabled { cursor: progress; opacity: 0.6; }
 
 /* Secondary CTA */
@@ -91,7 +91,7 @@ h1, h2, h3 { text-wrap: balance; }
   min-width: 2.5rem;
   border-radius: 999px;
   border: 1px solid var(--border-subtle);
-  background: var(--bg-primary);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--text-primary);
   font-family: var(--font-display);
   font-weight: 500;
@@ -116,7 +116,7 @@ input[type='range'].volume { accent-color: var(--accent-core); width: 100%; min-
 }
 
 /* Thumbnail as a record: grooves via the ring border, a spindle hole in the middle */
-.vinyl { border-radius: 999px; overflow: hidden; background: #141414; box-shadow: inset 0 0 0 3px #141414; }
+.vinyl { border-radius: 999px; overflow: hidden; background: #17243b; box-shadow: inset 0 0 0 3px #17243b; }
 .vinyl::after {
   content: '';
   position: absolute;
